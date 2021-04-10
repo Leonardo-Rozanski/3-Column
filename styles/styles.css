@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+:root {
+  --grey: hsl(0, 0%, 95%);
+  --cyan: hsl(184, 100%, 22%);
+  --cyan-dark: hsl(179, 100%, 13%);
+  --orange: hsl(31, 77%, 52%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+}
+body {
+  font-size: 15px;
+}
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+}
+p, a {
+  font-family: 'Lexend Deca', sans-serif;
+}
+a {
+  color: inherit;
+}
+.btn {
+  border-radius: 50px;
+  background-color: var(--grey);
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  margin-left: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--grey);
+  padding: 10px 0px 10px 0px;
+}
+
+/* ################## SECTIONS ################### */
+
+.sedan, .suvs, .luxury {
+  background-color: var(--orange);
+  max-width: 370px;
+  border-radius: 5px;
+  color: var(--grey);
+  padding: 20px;
+}
+.suvs {
+  background-color: var(--cyan);
+}
+.luxury {
+  background-color: var(--cyan-dark);
+}
+.sedan .btn {
+  color: var(--orange)
+}
+.suvs .btn {
+  color: var(--cyan)
+}
+.luxury .btn {
+  color: var(--cyan-dark)
+}
+
+/* ################## DIVS ################### */
+
+.sedan div, .suvs div, .luxury div {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.sedan div > img, h1, .suvs div > img, h1, .luxury div > img, h1 {
+  padding: 0px 50px;
+}
+.sedan div > h1, .suvs div > h1, .luxury div > h1 {
+  text-transform: uppercase;
+}
+.sedan div > p, .suvs div > p, .luxury div > p {
+  max-width: 70%;
+  margin: 0 auto;
+  color: var(--paragraph);
+  line-height: 25px;
+}
+
+@media (min-width: 1110px) {
+  .container {
+    flex-direction: row;
+    height: 100vh;
+    position: relative;
+  }
+  .sedan, .suvs, .luxury {
+    height: 500px;
+    padding-top: 60px;
+  }
+  .btn {
+    margin-top: 200px;
+  }
+}
+
